@@ -1,0 +1,11 @@
+<div class="container">
+    <h4>Nollytv Post Creator</h4>
+    <input type="text" [(ngModel)] = 'youtubeLink' placeholder="Enter Youtube Link">
+    <button (click)="generatePost()">Generate a Post</button>
+<br>
+    <div *ngIf="id !== ''">
+        <img [src]="'https://img.youtube.com/vi/' + id + '/sddefault.jpg'" alt="">
+        <button (click)="copyText()">{{copied ? 'Copied' : 'Copy Text'}}</button>
+    </div>
+</div>
+
